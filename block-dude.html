@@ -67,6 +67,7 @@ wallCtx.fillRect(23, 22, 10, 10);
 let playerDir = { row: 0, col: 0 };
 let playerPos = { row: 0, col: 0 };  // player position in the 2d array
 let playerFacing = -1;  // the direction the player is facing (1 for right, -1 for left)
+let rAF = null;  // keep track of the animation frame so we can cancel it
 let carryingBlock = false;  // if the player is carrying a block
 let width = 0;  // find the largest row and use that as the game width
 
@@ -159,7 +160,7 @@ function move(startPos, endPos) {
 
 // game loop
 function loop() {
-  requestAnimationFrame(loop);
+  rAF = requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
 
   // check to see if the player can move in the desired direction
@@ -184,6 +185,11 @@ function loop() {
 
       playerPos.row = row;
       playerPos.col = col;
+
+      // end game
+      if (cell === types.goal) {
+        cancelAnimationFrame(rAF);
+      }
       break;
 
     // only allow the player to move on top of a block or wall
