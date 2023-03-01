@@ -1,11 +1,15 @@
 # Basic Block Dude HTML and JavaScript Game
 
-This is a basic implementation of Block Dude, an old TI-83/4 Calculator game, but it's missing a few things intentionally and they're left as further exploration for the reader.
+This is a basic implementation of Block Dude, an old TI-83/4 Calculator game. It's missing a few things intentionally and they're left as further exploration for the reader.
 
-<img width="300" height="300" alt="" src="https://user-images.githubusercontent.com/2433219/94984424-044e0a80-0509-11eb-903a-c114d5b6f061.png">
+<img width="300" height="200" alt="" src="https://user-images.githubusercontent.com/2433219/222063512-b648b409-c9f7-45c9-a52c-291ebb343dad.png">
 
 ## Further Exploration
 
+- More levels
+  - Add more levels and have the next level start once the last one is finished
+- Add Restart
+  - If the player gets stuck they should be able to restart the current level
 - Mobile and touchscreen support
   - Allow the game to be scaled down to a phone size. See https://codepen.io/straker/pen/VazMaL
   - Support [touch controls](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
@@ -18,6 +22,7 @@ This is a basic implementation of Block Dude, an old TI-83/4 Calculator game, bu
 
 ## Other Basic Games
 
+- [Snake](https://gist.github.com/straker/ff00b4b49669ad3dec890306d348adc4)
 - [Pong](https://gist.github.com/straker/81b59eecf70da93af396f963596dfdc5)
 - [Breakout](https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b)
 - [Tetris](https://gist.github.com/straker/3c98304f8a6a9174efd8292800891ea1)
